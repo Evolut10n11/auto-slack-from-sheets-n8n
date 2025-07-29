@@ -13,9 +13,9 @@
 
 ## ⚙️ Компоненты workflow
 
+```markdown
 ```mermaid
 graph LR
-   graph LR
     Schedule[Schedule Trigger] --> SheetsRead[Google Sheets (read)]
     SheetsRead --> Loop[Loop Over Items]
     Loop --> IF[If Processed == "no"]
