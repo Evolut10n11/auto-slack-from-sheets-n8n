@@ -107,7 +107,3 @@ _Ivan Rodionov — github.com/Evolut10n11_
 
 ---
 
-## 📝 Лицензия
-
-[MIT License](LICENSE)
-
