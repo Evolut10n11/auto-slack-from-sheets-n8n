@@ -17,13 +17,15 @@
 
 ## 🧩 Схема работы
 
+```markdown
 ```mermaid
-    A[Schedule Trigger] --> B[Google Sheets (read)]
-    B --> C[Loop Over Items]
-    C --> D{If Processed == "no"}
-    D -- true --> E[HTTP Request → Slack]
-    E --> F[Google Sheets (append/update)]
-    D -- false --> G[Пропуск]
+graph LR
+    Schedule[Schedule Trigger] --> SheetsRead[Google Sheets (read)]
+    SheetsRead --> Loop[Loop Over Items]
+    Loop --> IF[If Processed == "no"]
+    IF -- true --> Slack[HTTP Request (Slack)]
+    Slack --> SheetsUpdate[Google Sheets (append/update)]
+    IF -- false --> End[skip]
 ```
 
 ---
