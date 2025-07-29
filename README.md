@@ -18,7 +18,6 @@
 ## 🧩 Схема работы
 
 ```mermaid
-graph TD
     A[Schedule Trigger] --> B[Google Sheets (read)]
     B --> C[Loop Over Items]
     C --> D{If Processed == "no"}
