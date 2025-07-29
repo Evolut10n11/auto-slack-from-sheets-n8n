@@ -15,9 +15,10 @@
 
 ```mermaid
 graph LR
+   graph LR
     Schedule[Schedule Trigger] --> SheetsRead[Google Sheets (read)]
     SheetsRead --> Loop[Loop Over Items]
-    Loop --> IF[If Processed = "no"]
+    Loop --> IF[If Processed == "no"]
     IF -- true --> Slack[HTTP Request (Slack)]
     Slack --> SheetsUpdate[Google Sheets (append/update)]
     IF -- false --> End[skip]
