@@ -78,7 +78,7 @@ graph LR
 
 ## ✍️ Автор
 
-_Ivan Roddionov_
+_Ivan Rodionov_
 
 ---
 
