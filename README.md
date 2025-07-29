@@ -67,20 +67,17 @@ docker run -d ^
   --name n8n ^
   -p 5678:5678 ^
   -v %cd%\n8n_data:/home/node/.n8n ^
-  -e N8N_ENCRYPTION_KEY=<твой_ключ> ^
   n8nio/n8n:1.59.0
 ```
-
-> ⚠️ Замените `<твой_ключ>` на ключ, использованный в прошлой сессии n8n, чтобы восстановить workflow.
 
 ---
 
 ### 3. Настрой workflow
 
-1. Открой `http://localhost:5678`
-2. Импортируй `workflow.json` из корня проекта
-3. Вставь Slack Webhook URL в ноду `HTTP Request`
-4. Убедись, что подключен Google Service Account к Google Sheets
+1. Настрой Google Service Account
+2. Укажи ID таблицы и Webhook URL Slack
+3. Импортируй workflow в n8n
+4. Запусти вручную или по расписанию
 
 ---
 
